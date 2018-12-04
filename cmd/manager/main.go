@@ -7,8 +7,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/chrisduong/myapp-operator/myapp-operator/pkg/apis"
-	"github.com/chrisduong/myapp-operator/myapp-operator/pkg/controller"
+	"github.com/chrisduong/myapp-operator/pkg/apis"
+	"github.com/chrisduong/myapp-operator/pkg/controller"
 
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"
 	"github.com/operator-framework/operator-sdk/pkg/leader"
