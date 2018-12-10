@@ -143,8 +143,8 @@ func newPodForCR(cr *appv1alpha1.AppService) *corev1.Pod {
 		Spec: corev1.PodSpec{
 			Containers: []corev1.Container{
 				{
-					Name:    "busybox",
-					Image:   "busybox",
+					Name:    "whalesay",
+					Image:   "docker/whalesay",
 					Command: []string{"sleep", "3600"},
 				},
 			},
