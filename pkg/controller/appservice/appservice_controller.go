@@ -131,6 +131,7 @@ func (r *ReconcileAppService) Reconcile(request reconcile.Request) (reconcile.Re
 
 // newPodForCR returns a busybox pod with the same name/namespace as the cr
 func newPodForCR(cr *appv1alpha1.AppService) *corev1.Pod {
+	input := cr.Spec.Input
 	labels := map[string]string{
 		"app": cr.Name,
 	}
@@ -145,7 +146,7 @@ func newPodForCR(cr *appv1alpha1.AppService) *corev1.Pod {
 				{
 					Name:    "whalesay",
 					Image:   "docker/whalesay",
-					Command: []string{"sleep", "3600"},
+					Command: []string{"cowsay", input},
 				},
 			},
 		},
